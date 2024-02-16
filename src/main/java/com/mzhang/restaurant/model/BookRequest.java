@@ -11,16 +11,16 @@ import java.util.Date;
 public class BookRequest implements Serializable {
 
     @JsonProperty("customerName")
-    public String customerName;
+    private String customerName;
 
     @JsonProperty("tableSize")
-    public int tableSize;
+    private int tableSize;
 
     @JsonProperty("reservationDateTime")
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    public Date reservationDateTime;
+    private Date reservationDateTime;
 
     @JsonProperty("reservationHours")
-    public int reservationHours = 2;
+    private int reservationHours = 2;
 
 }

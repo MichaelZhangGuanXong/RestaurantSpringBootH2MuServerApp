@@ -21,29 +21,29 @@ public class Reservation implements Serializable {
   @Id
   @Column(name = "id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  public long id;
+  private long id;
 
   @JsonProperty("customerName")
   @Column(name = "customerName")
-  public String customerName;
+  private String customerName;
 
   @JsonProperty("tableSize")
   @Column(name = "tableSize")
-  public int tableSize;
+  private int tableSize;
 
   @Column(name = "reservationDateTime")
   @JsonProperty("reservationDateTime")
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-  public Date reservationDateTime;
+  private Date reservationDateTime;
 
   @JsonProperty("reservationHours")
   @Column(name = "reservationHours")
-  public int reservationHours;
+  private int reservationHours;
 
   @Column(name = "bookDateTime")
   @JsonProperty("bookDateTime")
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
   @CreatedDate
-  public Date bookDateTime;
+  private Date bookDateTime;
 
 }
