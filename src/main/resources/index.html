@@ -85,7 +85,6 @@
 
                         success: function(msg)
                         {
-                            alert(msg);
                             $("#response").html(JSON.stringify(msg)).fadeIn("slow");
                         },
                         error: function(xhr, resp, text) {
@@ -110,7 +109,7 @@
                         },
                         error: function()
                         {
-                            alert("Failed to lookup !!!");
+                            $("#response").html("No reservation found!").fadeIn("slow");
                         }
                     });
                     return false;
